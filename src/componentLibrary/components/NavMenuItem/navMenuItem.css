@@ -1,0 +1,23 @@
+.oui-nav-menu-item {
+  @apply h-14 text-[#EBEBEB] p-4 cursor-pointer font-sans justify-between
+  flex gap-3 items-center
+  hover:bg-[#393B43]
+  active:bg-[#4F5159]
+  disabled:text-[#64656A] truncate;
+}
+
+.oui-nav-menu-item--selected {
+  @apply bg-[#74777F];
+}
+
+.oui-nav-menu-item__inner {
+  @apply flex gap-3 truncate;
+}
+
+.oui-nav-menu-item__text {
+  @apply truncate;
+}
+
+.oui-nav-menu-item__icon svg {
+  @apply w-6 shrink-0;
+}

@@ -1,0 +1,23 @@
+.oui-card {
+  @apply bg-[#21232E] text-white rounded-md font-sans;
+}
+
+.oui-card--bordered {
+  @apply border border-[#E0E1EC];
+}
+
+.oui-card--padding-none {
+  @apply p-0;
+}
+
+.oui-card--padding-light {
+  @apply p-2;
+}
+
+.oui-card--padding-medium {
+  @apply p-3;
+}
+
+.oui-card--padding-heavy {
+  @apply p-4;
+}

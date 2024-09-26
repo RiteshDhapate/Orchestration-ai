@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "userId": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "phone": "1234567890",
+      "username": "johndoe",
+      "userRole": "admin"
+    }
+  ]
+}

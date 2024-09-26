@@ -1,0 +1,31 @@
+.chartContainer {
+  display: grid;
+  position: relative;
+  height: 65vh;
+  grid-template-columns: 1fr;
+}
+
+.tooltip {
+  position: absolute;
+  grid-area: 1 / 1;
+  place-self: center;
+  background-color: #181921;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transform: translate(-160%, -40%);
+  margin-right: 100px;
+  top: 200px;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .tooltip {
+    top: '300px';
+  }
+}

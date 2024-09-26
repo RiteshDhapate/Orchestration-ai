@@ -1,0 +1,9 @@
+.oui-tab {
+  @apply px-4 h-10
+   flex-1 flex items-center justify-center
+    text-sm font-medium leading-none text-[#EBEBEB] text-opacity-60 select-none 
+    border-b-4  border-solid border-transparent  outline-none  
+    enabled:hover:bg-[#292A35] enabled:hover:bg-opacity-60
+   data-[state=active]:border-b-[#3B6EF3] data-[state=active]:text-opacity-100
+   disabled:text-opacity-40 disabled:cursor-not-allowed truncate;
+}

@@ -1,0 +1,35 @@
+{
+	"cSpell.ignorePaths": [
+		"package-lock.json",
+		"node_modules",
+		".vscode",
+		"src/constants.js",
+	],
+	"cSpell.words": [
+		"ashish",
+		"chakra",
+		"chartjs",
+		"CIRRO",
+		"clsx",
+		"CODEOWNERS",
+		"currentcolor",
+		"EASYPOST",
+		"endroute",
+		"envkey",
+		"FDXG",
+		"formik",
+		"Hailify",
+		"heroicons",
+		"mapbox",
+		"maxzoom",
+		"newplot",
+		"Orchestro",
+		"pdashboard",
+		"PKCE",
+		"stompjs",
+		"tailwindcss",
+		"thejonathanfox",
+		"zoomin",
+		"zoomout"
+	]
+}

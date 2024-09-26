@@ -1,0 +1,47 @@
+.oui-button {
+  @apply rounded-lg  h-10 px-4 flex gap-2 items-center justify-center
+  cursor-pointer disabled:cursor-not-allowed
+  disabled:text-[#EBEBEB] disabled:text-opacity-40 relative;
+}
+
+.oui-button:enabled:hover:after {
+  @apply rounded-lg content-[""] absolute w-full h-full bg-[#292A35] bg-opacity-60;
+}
+
+.oui-button > * {
+  @apply z-10;
+}
+
+.oui-button svg {
+  @apply h-6 w-6;
+}
+
+.oui-button--primary {
+  @apply text-[#EBEBEB] bg-gradient-to-r from-[#3BA0E6] to-[#3B6EF3];
+}
+
+.oui-button--secondary {
+  @apply text-[#EBEBEB] bg-[#2294FF] bg-opacity-60;
+}
+
+.oui-button--text {
+  @apply text-[#74BCFF];
+}
+
+.oui-button--textSecondary {
+  @apply text-[#EBEBEB];
+}
+
+.oui-button--outlined {
+  @apply text-[#74BCFF];
+}
+
+.oui-button--outlinedSecondary {
+  @apply text-[#EBEBEB] bg-[#21232E];
+}
+
+.oui-button--secondary,
+.oui-button--outlined,
+.oui-button--outlinedSecondary {
+  @apply border border-[#858698] border-opacity-20;
+}

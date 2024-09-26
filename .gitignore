@@ -1,0 +1,31 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+*.map
+
+# we use NPM currently
+yarn.lock
+
+# debug
+npm-debug.log*
+
+# local env files
+.env.stage
+.env.stage-e2
+.env.stage-e1
+.env
+.env.dev
+.env.prod
+# Sentry Config File
+.sentryclirc
+
+*storybook.log

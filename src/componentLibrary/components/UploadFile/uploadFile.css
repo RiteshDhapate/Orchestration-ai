@@ -1,0 +1,38 @@
+.oui-upload-file {
+  @apply flex flex-col gap-6  items-center justify-center;
+}
+
+.oui-upload-file--disabled {
+  @apply pointer-events-none;
+}
+.oui-upload-file__rectangle {
+  @apply w-full flex flex-col  items-center justify-center bg-[#1E253F];
+}
+
+.oui-upload-file__dropzone {
+  @apply w-full flex flex-col p-9 pb-12 items-center justify-center bg-[#1E253F] gap-5 border-4 border-dashed border-[#74BCFF] rounded-lg;
+}
+
+.oui-upload-file__dropzone--accept {
+  @apply border-[#22E588];
+}
+
+.oui-upload-file__dropzone--reject {
+  @apply border-[#FF263F];
+}
+
+.oui-upload-file__label {
+  @apply text-center text-2xl font-medium text-white;
+}
+
+.oui-upload-file__sub-label {
+  @apply text-center text-lg font-normal text-white;
+}
+
+.oui-upload-file__action-container {
+  @apply flex justify-center;
+}
+
+.oui-upload-file__icon {
+  @apply text-white w-[6.25rem] h-[6.25rem];
+}

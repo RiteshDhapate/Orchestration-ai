@@ -1,0 +1,67 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  width: var(--navigation-width, 252px);
+  background-color: #191a23;
+  padding: 20px 12px 0 12px;
+  z-index: var(--navigation-z-index, 750);
+  border-right: 1px solid #ffffff1a;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollBox {
+  margin-top: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 120px); /* fallback */
+  height: calc(100dvh - 250px);
+}
+
+@media (max-width: 1196px) {
+  .scrollBox {
+    height: calc(100vh - 120px); /* fallback */
+    height: calc(100dvh - 180px);
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  width: Fill 100%;
+  background: transparent;
+  border-radius: 0px 4px 4px 0px;
+  padding: 12px 16px 12px 24px;
+  border: 1px solid transparent;
+  /* margin-bottom: 16px; */
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease;
+  border-radius: 12px;
+}
+
+/* Hover Effect */
+.links:hover,
+.links:focus-visible {
+  background-color: var(--navigation-bg-hover);
+}
+
+.links.active {
+  background-color: var(--navigation-bg-hover);
+  border: 1px solid #393a4b;
+}
+
+.links svg {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin-right: 12px;
+}

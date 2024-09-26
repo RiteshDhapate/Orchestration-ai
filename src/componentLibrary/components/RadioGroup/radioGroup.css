@@ -1,0 +1,7 @@
+.oui-radioGroup {
+  @apply flex gap-2;
+}
+
+.oui-radioGroup--vertical {
+  @apply flex-col;
+}

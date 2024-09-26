@@ -1,0 +1,8 @@
+.pageWrapper {
+  position: relative;
+  min-height: inherit;
+}
+
+.pageWrapper + .pageWrapper {
+  padding-top: 0;
+}

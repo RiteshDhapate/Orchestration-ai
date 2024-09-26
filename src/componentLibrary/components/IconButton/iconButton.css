@@ -1,0 +1,22 @@
+.oui-iconButton {
+  @apply rounded-full flex h-10 w-10 items-center justify-center
+  cursor-pointer disabled:cursor-not-allowed
+  enabled:hover:bg-[#292A35] enabled:hover:bg-opacity-60
+  disabled:text-[#EBEBEB] disabled:text-opacity-40;
+}
+
+.oui-iconButton svg {
+  @apply h-6 w-6;
+}
+
+.oui-iconButton--primary {
+  @apply text-[#2294FF];
+}
+
+.oui-iconButton--secondary {
+  @apply text-[#EBEBEB];
+}
+
+.oui-iconButton--danger {
+  @apply text-[#FF263F] text-opacity-60;
+}

@@ -1,0 +1,27 @@
+.oui-stat-block {
+  @apply flex flex-col gap-5 font-sans;
+}
+
+.oui-stat-block__icon {
+  @apply w-16;
+}
+
+.oui-stat-block--up .oui-stat-block__icon {
+  @apply text-[#22E588];
+}
+
+.oui-stat-block--down .oui-stat-block__icon {
+  @apply text-[#FF7B80];
+}
+
+.oui-stat-block__footer {
+  @apply flex items-center;
+}
+
+.oui-stat-block__title {
+  @apply text-base font-semibold leading-none;
+}
+
+.oui-stat-block__value {
+  @apply text-6xl font-bold leading-none;
+}

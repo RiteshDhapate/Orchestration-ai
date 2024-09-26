@@ -1,0 +1,20 @@
+.oui-avatar {
+  @apply inline-flex select-none items-center justify-center overflow-hidden rounded-full align-middle uppercase
+  hover:outline hover:outline-2 hover:outline-[#292A353C] cursor-pointer;
+}
+
+.oui-avatar--small {
+  @apply w-10 h-10;
+}
+
+.oui-avatar--large {
+  @apply w-12 h-12;
+}
+
+.oui-avatar__image {
+  @apply h-full w-full rounded-[inherit] object-cover;
+}
+
+.oui-avatar__fallback {
+  @apply leading-none flex h-full w-full items-center justify-center  text-[15px] font-medium bg-[#505159] text-[#c2c5c6];
+}

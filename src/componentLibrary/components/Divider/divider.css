@@ -1,0 +1,7 @@
+.oui-divider--horizontal {
+  @apply border border-[#EBEBEB] rounded-sm w-full;
+}
+
+.oui-divider--vertical {
+  @apply h-full w-0.5 bg-[#EBEBEB] rounded-sm;
+}

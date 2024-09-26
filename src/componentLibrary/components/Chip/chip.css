@@ -1,0 +1,48 @@
+.oui-chip {
+  @apply rounded-lg h-8 px-2 flex gap-2 items-center justify-center
+  cursor-pointer disabled:cursor-not-allowed
+relative text-sm leading-none font-medium;
+}
+
+.oui-chip:enabled:hover:after {
+  @apply rounded-lg content-[""] absolute w-full h-full bg-[#A9C7FF] bg-opacity-[8%];
+}
+
+.oui-chip > * {
+  @apply z-10;
+}
+
+.oui-chip svg {
+  @apply h-[1.125rem] w-[1.125rem];
+}
+
+.oui-chip--primary {
+}
+
+.oui-chip--secondary {
+  @apply text-[#EBEBEB] bg-[#2294FF] bg-opacity-60;
+}
+
+.oui-chip--outlined {
+  @apply border border-solid disabled:!border-[#858698] disabled:!opacity-40 disabled:!text-[#EBEBEB] disabled:!text-opacity-40;
+}
+
+.oui-chip--solid {
+  @apply disabled:!bg-[#292A35] disabled:!bg-opacity-40 disabled:!text-[#EBEBEB] disabled:!text-opacity-40;
+}
+
+.oui-chip--outlined.oui-chip--danger {
+  @apply border-[#FF263F] border-opacity-60 text-[#FF263F] text-opacity-60;
+}
+
+.oui-chip--outlined.oui-chip--primary {
+  @apply text-[#EBEBEB] border-[#858698] border-opacity-20;
+}
+
+.oui-chip--solid.oui-chip--danger {
+  @apply bg-[#FF263F] bg-opacity-60 text-black;
+}
+
+.oui-chip--solid.oui-chip--primary {
+  @apply text-[#EBEBEB] bg-[#2294FF];
+}

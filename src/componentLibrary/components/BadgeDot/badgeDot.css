@@ -1,0 +1,47 @@
+.oui-badgeDot {
+  @apply relative;
+}
+
+.oui-badgeDot--alert .badgeDot__indicator {
+  @apply bg-[#2294FF];
+}
+
+.oui-badgeDot--success .badgeDot__indicator {
+  @apply bg-[#22E588];
+}
+
+.oui-badgeDot--error .badgeDot__indicator {
+  @apply bg-[#FF263F];
+}
+
+.oui-badgeDot--warning .badgeDot__indicator {
+  @apply bg-[#FFB323];
+}
+
+.badgeDot__indicator {
+  @apply absolute rounded-full;
+}
+
+.oui-badgeDot--small .badgeDot__indicator {
+  @apply w-2 h-2;
+}
+
+.oui-badgeDot--large .badgeDot__indicator {
+  @apply w-3 h-3;
+}
+
+.oui-badgeDot--topLeft .badgeDot__indicator {
+  @apply top-0 left-0 -translate-x-[20%] -translate-y-[20%];
+}
+
+.oui-badgeDot--topRight .badgeDot__indicator {
+  @apply top-0 right-0  translate-x-[20%] -translate-y-[20%];
+}
+
+.oui-badgeDot--bottomRight .badgeDot__indicator {
+  @apply bottom-0 right-0  translate-x-[20%] translate-y-[20%];
+}
+
+.oui-badgeDot--bottomLeft .badgeDot__indicator {
+  @apply bottom-0 left-0  -translate-x-[20%] translate-y-[20%];
+}

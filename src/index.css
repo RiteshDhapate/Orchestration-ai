@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: #ffa904;
+
+  --form-element-border: 1px #b3b3b3 solid;
+  --form-element-border-radius: 0;
+  --form-element-background-color: #fff;
+  --form-element-focus-border-color: #000;
+
+  --button-bg: #212020;
+  --button-color: #fff;
+  --button-bg-hover: #515151;
+  --button-border-radius: 8px;
+
+  --navigation-width: 252px;
+  --header-height: 94px;
+  --navigation-bg-hover: oklch(0.5 0.01 360 / 0.1);
+
+  --app-foreground: #ffffff;
+  --app-border-radius: 8px;
+  --app-max-width: 75rem;
+
+  --navigation-z-index: 750;
+  --header-z-index: 500;
+
+  background: #191a23;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Until we have time to work out a component system lets use some global CSS for speed */
+
+.fieldset {
+  border: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.chakra-card {
+  background: rgba(0, 21, 46, 0.2) !important;
+}
+
+.chakra-avatar {
+  background: #505159 !important;
+}
+
+.chakra-avatar > svg {
+  color: #7d8488 !important;
+}
+
+.chakra-primary-button {
+  background: linear-gradient(96.24deg, #3ba0e6 0%, #3b6ef3 100%) !important;
+  border-radius: 4px !important;
+}
+
+.chakra-primary-button:hover {
+  filter: brightness(90%);
+}
+
+.chakra-modal__content {
+  background-color: #191a23 !important;
+}
+
+/* Chakra fix */
+.chakra-select,
+.chakra-form__label {
+  cursor: pointer;
+}
+
+.chakra-form__label {
+  margin-left: 5px !important;
+}
+
+a.chakra-text {
+  text-decoration: none !important;
+  color: #2489ff;
+  font-weight: 500 !important;
+}
+
+a.chakra-text:hover {
+  color: #469cfe;
+  font-weight: 500 !important;
+}
+
+.chakra-menu__menu-button:hover .chakra-avatar,
+.chakra-menu__menu-button:focus-visible .chakra-avatar {
+  outline: 2px solid var(--color-brand);
+}
+/* Temp for readonly Carrier Info page */
+.chakra-input.chakra-input:disabled,
+.chakra-select.chakra-select:disabled {
+  opacity: 0.75;
+}
+
+.chakra-input,
+.chakra-select {
+  /* padding-left: 8px !important;
+  padding-right: 8px !important; */
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  background: rgba(133, 134, 152, 0.2) !important;
+  border-radius: 4px !important;
+  border-width: 0px !important;
+}
+
+.chakra-input::placeholder,
+.chakra-select::placeholder {
+  color: #7d8488 !important;
+}
+
+.chakra-input__left-element {
+  color: #7d8488 !important;
+}
+
+.chakra-form__label {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* Chakra Alert override */
+.chakra-alert {
+  border-radius: var(--app-border-radius);
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.chakra-alert a {
+  text-decoration: underline;
+}
+
+/* Chakra Modal override */
+#new-user-modal__overlay {
+  left: var(--navigation-width);
+  top: var(--header-height);
+  z-index: 400;
+}
+
+.chakra-modal__content-container:has(#chakra-modal-new-user-modal__content) {
+  left: var(--navigation-width);
+  top: var(--header-height);
+  z-index: 400;
+  padding-top: 120px;
+  max-width: calc(100vw - var(--navigation-width));
+}
+
+#chakra-modal-new-user-modal__content {
+  /* max-width: calc(100vw - var(--navigation-width) - 1.5rem - 1.5rem); */
+  max-width: 1200px;
+  margin-inline: 1.5rem;
+}
+
+#chakra-modal-new-user-modal__content p {
+  max-width: 635px;
+}
+
+/* Chakra table override */
+.chakra-table {
+  --table-padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.chakra-table th {
+  text-transform: none;
+  letter-spacing: normal;
+  padding-inline: var(--table-padding);
+  border-bottom: 1px solid #858585;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.chakra-table td {
+  border-bottom: 1px solid #474951;
+  padding-inline: var(--table-padding);
+  padding-block: var(--table-padding);
+  font-weight: 500;
+}
+
+.chakra-table td a:not(.chakra-button) {
+  font-weight: bold;
+}
+
+.custom-marker {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 6px solid rgba(0, 115, 255, 0.4);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.custom-marker .data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-marker .badge {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 4px;
+  border-radius: 500px;
+  background-color: #fff;
+}
+
+.custom-marker .alerts,
+.custom-marker .badge-label {
+  margin: 0 2px;
+}
+
+.custom-marker .badge-label,
+.custom-marker .label {
+  display: flex;
+  justify-content: center; /* Center horizontally. */
+  align-items: center; /* Center vertically. */
+  width: 100%;
+}
+
+.custom-marker .badge-label {
+  color: #000;
+}
+
+.custom-marker .label {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.active {
+  background-color: rgba(41, 42, 53, 1);
+  border: 1px solid rgba(224, 225, 236, 0.2);
+  color: #fff;
+}
+
+.map-toolbar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 25px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.map-toolbar button {
+  padding: 6px;
+}
+
+.state-map-graident {
+  fill: url(#state-map-gradient-render) #3ba0e6;
+}
+
+/* For "Network Insights" page, Preset.io embedded dashboard */
+#my-superset-container iframe {
+  --top-offset: 75px;
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) + var(--top-offset));
+  margin-left: -30px;
+  margin-top: calc((var(--top-offset)) * -1);
+}
+
+.pageTitle {
+  position: relative;
+}
+
+.pageTitle::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translate(-50%, 0);
+}
+
+.pageTitleYellow {
+  position: relative;
+}
+
+.pageTitleYellow::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #ffb323;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translate(-50%, 0);
+}
+
+.carrierNetwork svg {
+  height: 78vh !important;
+}
+
+@media (max-width: 767px) {
+  .carrierNetwork svg {
+    height: 100% !important;
+  }
+}
+
+.integrationFlow svg {
+  height: 100vh;
+}
+
+#login {
+  background-image: url("../public/loginsvg.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  #login {
+    background-position: bottom;
+  }
+}
+
+/* date picker */
+
+.react-datepicker__header {
+  background-color: #21232e !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #fff !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #216ba5 !important;
+}

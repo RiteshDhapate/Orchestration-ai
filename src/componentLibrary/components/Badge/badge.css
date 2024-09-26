@@ -1,0 +1,19 @@
+.oui-badge {
+  @apply px-1 h-6 rounded text-sm leading-none font-bold flex items-center justify-center;
+}
+
+.oui-badge--alert {
+  @apply text-[#74BCFF] bg-[#2294FF] bg-opacity-25;
+}
+
+.oui-badge--success {
+  @apply text-[#4BEA9E] bg-[#22E588] bg-opacity-25;
+}
+
+.oui-badge--error {
+  @apply text-[#FF7B80] bg-[#FF263F] bg-opacity-25;
+}
+
+.oui-badge--warning {
+  @apply text-[#FFC252] bg-[#FFB323] bg-opacity-25;
+}

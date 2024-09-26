@@ -1,0 +1,51 @@
+.oui-checkbox {
+  @apply rounded flex h-6 w-6 appearance-none items-center justify-center  outline-none;
+}
+
+.oui-checkbox__outer {
+  @apply cursor-pointer rounded-full w-10 h-10 hover:bg-[#292A35] hover:bg-opacity-40 flex items-center justify-center transition-colors;
+}
+
+.oui-checkbox__outer--disabled {
+  @apply pointer-events-none;
+}
+
+.oui-checkbox--checked-true {
+  @apply bg-gradient-to-r from-[#3BA0E6] to-[#3B6EF3];
+}
+
+.oui-checkbox--checked-false {
+  @apply border-solid border-2 border-[#EBEBEB];
+}
+
+.oui-checkbox--checked-indeterminate {
+  @apply bg-[#2294FF];
+}
+
+.oui-checkbox--checked-false.oui-checkbox--error {
+  @apply border-[#FF263F];
+}
+
+.oui-checkbox--checked-indeterminate.oui-checkbox--error,
+.oui-checkbox--checked-true.oui-checkbox--error {
+  @apply bg-[#FF263F];
+  background-image: none;
+}
+
+.oui-checkbox--checked-false:disabled {
+  @apply !border-[#292A35] !border-opacity-40;
+}
+
+.oui-checkbox--checked-indeterminate:disabled,
+.oui-checkbox--checked-true:disabled {
+  @apply !bg-[#292A35] !bg-opacity-40;
+  background-image: none !important;
+}
+
+.oui-checkbox__indicator {
+  @apply w-4 text-[#EBEBEB];
+}
+
+.oui-checkbox:disabled .oui-checkbox__indicator {
+  @apply text-[#EBEBEB] text-opacity-40;
+}

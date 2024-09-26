@@ -1,0 +1,31 @@
+.oui-switch {
+  @apply w-[34px] h-[14px] rounded-full relative outline-none cursor-pointer disabled:bg-[#292A35] disabled:bg-opacity-40;
+}
+
+.oui-switch--checked {
+  @apply enabled:bg-gradient-to-r from-[#3BA0E6] to-[#3B6EF3];
+}
+
+.oui-switch--unchecked {
+  @apply bg-[#292A35];
+}
+
+.oui-switch__thumb {
+  @apply block w-5 h-5 shadow rounded-full transition-transform duration-100  will-change-transform -translate-y-[3px];
+}
+
+.oui-switch:disabled .oui-switch__thumb {
+  @apply !bg-[#292A35];
+}
+
+.oui-switch--checked:enabled .oui-switch__thumb {
+  @apply bg-[#EBEBEB];
+}
+
+.oui-switch--unchecked:enabled .oui-switch__thumb {
+  @apply bg-gradient-to-r from-[#3BA0E6] to-[#3B6EF3];
+}
+
+.oui-switch--checked .oui-switch__thumb {
+  @apply translate-x-[18px];
+}

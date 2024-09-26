@@ -1,0 +1,31 @@
+.oui-radio {
+  @apply rounded-full inline-flex h-5 w-5 appearance-none items-center justify-center 
+  outline-none border-2 border-solid 
+  border-[#EBEBEB] data-[state=checked]:border-[#2294FF]
+  disabled:!border-[#EBEBEB] disabled:!border-opacity-40;
+}
+
+.oui-radio__outer--disabled {
+  @apply pointer-events-none;
+}
+
+.oui-radio.oui-radio--error {
+  @apply border-[#FF263F];
+}
+
+.oui-radio__indicator {
+  @apply flex items-center justify-center w-full h-full relative after:content-[''] 
+  after:block after:w-2.5 after:h-2.5 after:rounded-full after:bg-[#2294FF];
+}
+
+.oui-radio:disabled .oui-radio__indicator {
+  @apply after:bg-[#EBEBEB] after:bg-opacity-40;
+}
+
+.oui-radio--error .oui-radio__indicator {
+  @apply after:bg-[#FF263F];
+}
+
+.oui-radio__outer {
+  @apply cursor-pointer rounded-full w-10 h-10 hover:bg-[#292A35] hover:bg-opacity-40 inline-flex items-center justify-center transition-colors;
+}

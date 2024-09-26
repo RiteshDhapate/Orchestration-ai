@@ -1,0 +1,15 @@
+.oui-scrollArea__viewport {
+  @apply w-full h-full;
+}
+
+.oui-scrollArea__scrollbar {
+  @apply flex select-none touch-none p-0.5 bg-[#292A35] transition-colors duration-[160ms] ease-out  data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col data-[orientation=horizontal]:h-2.5;
+}
+
+.oui-scrollArea__thumb {
+  @apply flex-1 bg-white bg-opacity-20 rounded relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:min-w-11 before:min-h-11;
+}
+
+.oui-scrollArea {
+  @apply overflow-hidden;
+}

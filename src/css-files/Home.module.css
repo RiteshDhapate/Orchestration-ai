@@ -1,0 +1,16 @@
+.customBorder {
+  border: 1px solid;
+  border-image-source: conic-gradient(
+    from 180deg at 51.95% 49.81%,
+    rgba(0, 0, 0, 0) -2.11deg,
+    rgba(51, 66, 255, 0) 131.45deg,
+    #37f4f4 175.58deg,
+    rgba(51, 66, 255, 0) 252.32deg,
+    rgba(0, 0, 0, 0) 310.85deg,
+    rgba(0, 0, 0, 0) 357.89deg,
+    rgba(51, 66, 255, 0) 491.45deg
+  );
+  box-shadow:
+    -2px -2px 20px 0px #60efff33,
+    2px 2px 20px 0px #0061ff33;
+}

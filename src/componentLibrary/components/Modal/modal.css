@@ -1,0 +1,27 @@
+.oui-modal__overlay {
+  @apply bg-black bg-opacity-70 z-[998] data-[state=open]:animate-overlayShow fixed inset-0;
+}
+
+.oui-modal__title {
+  @apply m-0 mr-8 text-lg font-medium truncate;
+}
+
+.oui-modal__description {
+  @apply mt-2.5 mb-6 text-base leading-normal;
+}
+
+.oui-modal__close-button {
+  @apply absolute top-2.5 right-2.5 inline-flex h-6 w-6 focus:outline-none;
+}
+
+.oui-modal__body {
+  @apply max-h-[60vh] overflow-scroll;
+}
+
+.oui-modal__controls {
+  @apply mt-6 flex justify-end gap-6;
+}
+
+.oui-modal__box {
+  @apply z-[999] text-[#EBEBEB] data-[state=open]:animate-contentShow fixed top-[50%] left-[50%]  w-[90vw] max-w-[28.125rem] translate-x-[-50%] translate-y-[-50%] rounded-md bg-[#1E253F] p-6  focus:outline-none;
+}
