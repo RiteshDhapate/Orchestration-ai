@@ -57,7 +57,7 @@ const ToolsPopover = () => {
               </div>
             </a>
             <a
-              href="https://pld-analyzer.vercel.app/"
+              href="https://pld-analyzer-nu.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
