@@ -19,33 +19,52 @@ const ToolsPopover = () => {
     <div className="relative">
       <div
         className="flex flex-col justify-center items-center cursor-pointer"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <UsersIcon stroke="#A0A5AECC" fill="transparent" />
         <span className="text-[#A0A5AECC]">Tools</span>
       </div>
       {isOpen && (
-        <div
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          className="absolute z-50 top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-[#181921] border border-[#85869833] rounded-lg p-2 shadow-lg"
-        >
+        <div className="absolute z-50 top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-[#181921] border border-[#85869833] rounded-lg p-2 shadow-lg">
           <div className="grid gap-2">
-            <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
-              <span className="text-[#A0A5AECC]">SustainPack Advisor</span>
-            </div>
-            <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
-              <span className="text-[#A0A5AECC]">
-                Multivendor Orchestration
-              </span>
-            </div>
-            <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
-              <span className="text-[#A0A5AECC]">Shipping Cost Analysis</span>
-            </div>
-            <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
-              <span className="text-[#A0A5AECC]">PLD Data Analyzer</span>
-            </div>
+            <a
+              href="https://sustainpack-one.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
+                <span className="text-[#A0A5AECC]">SustainPack Advisor</span>
+              </div>
+            </a>
+            <a
+              href="https://ship-talk-shipment-details-omega.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
+                <span className="text-[#A0A5AECC]">
+                  Multivendor Orchestration
+                </span>
+              </div>
+            </a>
+            <a
+              href="https://shipping-cost-analysis-ochre.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
+                <span className="text-[#A0A5AECC]">Shipping Cost Analysis</span>
+              </div>
+            </a>
+            <a
+              href="https://pld-analyzer.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="p-2 hover:bg-[#2A2B36] rounded cursor-pointer">
+                <span className="text-[#A0A5AECC]">PLD Data Analyzer</span>
+              </div>
+            </a>
           </div>
         </div>
       )}
@@ -86,10 +105,15 @@ const TopNav = () => {
           />
           <span className="text-[#1A8DBE]">Home</span>
         </Link>
-        <div className="flex flex-col justify-center items-center">
+        <a
+          href="https://orchestro-chat.vercel.app/chat"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-col justify-center items-center"
+        >
           <MessageIcon stroke="#A0A5AECC" fill="transparent" />
           <span className="text-[#A0A5AECC]">Message</span>
-        </div>
+        </a>
         <ToolsPopover />
         <div className="flex flex-col justify-center items-center">
           <DocumentIcon stroke="#A0A5AECC" fill="transparent" />

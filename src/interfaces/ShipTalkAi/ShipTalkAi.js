@@ -48,18 +48,26 @@ const ShipTalkAi = () => {
       });
     }, 100);
     try {
-      const response = await fetch("https://chat-bot-rag.orchestro.ai/Query/", {
+      const response = await fetch("https://shiptalkai.onrender.com/chat/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          query: prompt,
+          user_message: prompt,
+          conversation_history: [
+            {
+              role: "user",
+              content: "Previous message content",
+            },
+            // ... additional messages if any
+          ],
         }),
       });
 
       if (response.ok) {
         const data = await response.json();
+        console.log("My data ->>",data);
         setLoader(false);
         let div = document.createElement("div");
         div.className =
@@ -69,7 +77,7 @@ const ShipTalkAi = () => {
         let divAns = document.createElement("div");
         divAns.className =
           "bg-[#181921] px-4 py-2 rounded-lg border border-[#D9D9D933] self-start flex flex-col gap-3 leading-8";
-        divAns.innerHTML = convertMarkdownToHtml(data.response);
+        divAns.innerHTML = convertMarkdownToHtml(data.assistant_response);
         containerRef.current.append(divAns);
         setPrompt("");
         setTimeout(() => {

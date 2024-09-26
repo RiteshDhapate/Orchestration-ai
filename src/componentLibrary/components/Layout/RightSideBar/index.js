@@ -86,7 +86,7 @@ const RightSidebar = ({ addPost }) => {
               >
                 <div className="flex items-center">
                   <img
-                    src="https://via.placeholder.com/32"
+                    src={user.img}
                     alt="expert-avatar"
                     className="w-8 h-8 rounded-full mr-3"
                   />
@@ -190,12 +190,18 @@ const RightSidebar = ({ addPost }) => {
             ensure your camera and microphone are working.
           </ModalBody>
           <ModalFooter>
-            <button
-              type="button"
-              className="bg-[#181921] border border-[#1A8DBE] py-1 px-3 rounded-md text-sm text-[#1A8DBE] transition duration-300 flex items-center text-nowrap gap-2"
+            <a
+              href="https://orchestra-video.vercel.app/meeting/user_2mcGIwKv6r4HUUILzCtAt9bSZdc?personal=true"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Join Call
-            </button>
+              <button
+                type="button"
+                className="bg-[#181921] border border-[#1A8DBE] py-1 px-3 rounded-md text-sm text-[#1A8DBE] transition duration-300 flex items-center text-nowrap gap-2"
+              >
+                Join Call
+              </button>
+            </a>
           </ModalFooter>
         </ModalContent>
       </Modal>
