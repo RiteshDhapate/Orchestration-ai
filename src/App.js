@@ -62,9 +62,9 @@ export const ProtectedRoute = ({ element }) => {
     return <div></div>;
   }
 
-  if (!token) {
-    return <Navigate to="/app/login" />;
-  }
+  // if (!token) {
+  //   return <Navigate to="/app/login" />;
+  // }
 
   return element;
 };
